@@ -13,7 +13,7 @@ public interface ExampleResource {
 
     @GetMapping("/{id}")
     @ResponseStatus (HttpStatus.OK)
-    @ApiOperation("Получение сущьности")
+    @ApiOperation("Получение сущности")
     Entity getSomeEntity(@PathVariable("id") Long id,
                          @RequestBody Class clazz,
                          @CookieValue("Refresh_Token") String token,
@@ -21,16 +21,16 @@ public interface ExampleResource {
 
     @PostMapping("/newEntity")
     @ResponseStatus(HttpStatus.CREATED)
-    @ApiOperation("Добавляем сущьность")
+    @ApiOperation("Добавляем сущность")
     void addEntity();
 
     @PutMapping("/{id}")
     @ResponseStatus (HttpStatus.OK)
-    @ApiOperation("Изменяем сущьность")
+    @ApiOperation("Изменяем сущность")
     void changeEntity(@PathVariable("id") Long id);
 
     @DeleteMapping("/{id}")
     @ResponseStatus (HttpStatus.OK)
-    @ApiOperation("Удоляем сущьность")
+    @ApiOperation("Удоляем сущность")
     void deleteEntity(@PathVariable("id") Long id);
 }

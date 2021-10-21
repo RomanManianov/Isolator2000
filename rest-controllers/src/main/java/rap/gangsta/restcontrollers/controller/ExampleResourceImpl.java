@@ -1,12 +1,10 @@
 package rap.gangsta.restcontrollers.controller;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
 import rap.gangsta.restcontrollers.resources.ExampleResource;
 
 import javax.swing.text.html.parser.Entity;
 
-@RequiredArgsConstructor
 @RestController
 public class ExampleResourceImpl implements ExampleResource {
 

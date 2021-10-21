@@ -8,7 +8,6 @@ import javax.swing.text.html.parser.Entity;
 @RestController
 public class ExampleResourceImpl implements ExampleResource {
 
-
     @Override
     public Entity getSomeEntity(Long id, Class clazz, String token, byte consumersCount) {
         return null;
@@ -17,7 +16,6 @@ public class ExampleResourceImpl implements ExampleResource {
     @Override
     public void addEntity() {
     }
-
 
     @Override
     public void changeEntity(Long id) {

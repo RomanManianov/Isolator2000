@@ -19,10 +19,15 @@
 
     <dependencies>
         <dependency>
-            <groupId>rap.gangsta</groupId>
-            <artifactId>broker-integration</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${swagger.annotations.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>rap.gangsta</groupId>
             <artifactId>rest-security</artifactId>
@@ -32,15 +37,6 @@
             <groupId>rap.gangsta</groupId>
             <artifactId>general</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-annotations</artifactId>
-            <version>${swagger.annotations.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
 

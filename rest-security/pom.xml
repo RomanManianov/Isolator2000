@@ -14,20 +14,20 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <spring.version>5.4.3</spring.version>
-        <spring.boot.version>2.5.4</spring.boot.version>
+        <spring-boot-starter-security.version>2.5.4</spring-boot-starter-security.version>
+        <spring-security-test.version>5.4.3</spring-security-test.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-            <version>${spring.boot.version}</version>
+            <version>${spring-boot-starter-security.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
-            <version>${spring.version}</version>
+            <version>${spring-security-test.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>

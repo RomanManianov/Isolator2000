@@ -1,6 +1,5 @@
 package rap.gangsta.mdmintegration.service.assistive;
 
-import org.intellij.lang.annotations.JdkConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import rap.gangsta.general.ifaces.mdm.MdmServiceManager;

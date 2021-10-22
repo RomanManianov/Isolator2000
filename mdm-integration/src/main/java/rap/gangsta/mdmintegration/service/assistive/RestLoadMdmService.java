@@ -1,8 +1,6 @@
 package rap.gangsta.mdmintegration.service.assistive;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import rap.gangsta.general.dto.MdmItemDetailDtoResponse;

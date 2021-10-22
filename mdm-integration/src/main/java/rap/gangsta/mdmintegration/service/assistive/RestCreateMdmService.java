@@ -1,7 +1,6 @@
 package rap.gangsta.mdmintegration.service.assistive;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import rap.gangsta.general.dto.MdmItemDetailDtoResponse;
 import rap.gangsta.general.dto.MdmItemDtoResponse;

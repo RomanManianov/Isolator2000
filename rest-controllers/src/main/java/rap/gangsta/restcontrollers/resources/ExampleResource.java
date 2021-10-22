@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.swing.text.html.parser.Entity;
 
-@Api(tags = "Можно добавить некоторый тег")
+@Api("Можно добавить некоторый тег")
 @RequestMapping("/api/v1/url")
 public interface ExampleResource {
 
@@ -31,6 +31,6 @@ public interface ExampleResource {
 
     @DeleteMapping("/{id}")
     @ResponseStatus (HttpStatus.OK)
-    @ApiOperation("Удоляем сущность")
+    @ApiOperation("Удаляем сущность")
     void deleteEntity(@PathVariable("id") Long id);
 }

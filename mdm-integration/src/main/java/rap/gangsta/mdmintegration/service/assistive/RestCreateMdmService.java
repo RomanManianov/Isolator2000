@@ -5,24 +5,26 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import rap.gangsta.general.dto.MdmItemDetailDtoResponse;
 import rap.gangsta.general.dto.MdmItemDtoResponse;
+import rap.gangsta.general.ifaces.mdm.MdmCreateService;
 import rap.gangsta.mdmintegration.configuration.MdmPaths;
 
 @Service
-@Qualifier("updateMdmService")
-public class UpdateMdmService implements AssistiveMdmService{
+public class RestCreateMdmService implements MdmCreateService {
 
     private final MdmPaths mdmPaths;
 
     @Autowired
-    public UpdateMdmService(MdmPaths mdmPaths) {
+    public RestCreateMdmService(MdmPaths mdmPaths) {
         this.mdmPaths = mdmPaths;
     }
 
-    public MdmItemDtoResponse updateItem() {
+    @Override
+    public MdmItemDtoResponse createItem() {
         return null;
     }
 
-    public MdmItemDetailDtoResponse updateItemDetail() {
+    @Override
+    public MdmItemDetailDtoResponse createItemDetail() {
         return null;
     }
 }

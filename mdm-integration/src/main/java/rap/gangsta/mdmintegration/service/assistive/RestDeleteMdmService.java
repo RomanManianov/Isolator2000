@@ -5,26 +5,26 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import rap.gangsta.general.dto.MdmItemDetailDtoResponse;
 import rap.gangsta.general.dto.MdmItemDtoResponse;
+import rap.gangsta.general.ifaces.mdm.MdmDeleteService;
 import rap.gangsta.mdmintegration.configuration.MdmPaths;
 
-import java.util.List;
-
 @Service
-@Qualifier("listMdmService")
-public class ListMdmService implements AssistiveMdmService{
+public class RestDeleteMdmService implements MdmDeleteService {
 
     private final MdmPaths mdmPaths;
 
     @Autowired
-    public ListMdmService(MdmPaths mdmPaths) {
+    public RestDeleteMdmService(MdmPaths mdmPaths) {
         this.mdmPaths = mdmPaths;
     }
 
-    public List<MdmItemDtoResponse> listItem() {
+    @Override
+    public MdmItemDtoResponse deleteItem() {
         return null;
     }
 
-    public List<MdmItemDetailDtoResponse> listItemDetail() {
+    @Override
+    public MdmItemDetailDtoResponse deleteItemDetail() {
         return null;
     }
 }

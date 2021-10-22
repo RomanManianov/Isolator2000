@@ -12,7 +12,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.logout.LogoutFilter;
-import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -47,12 +46,12 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     /**
      * TODO: при создании необходима перенастройка ендпоинтов
+     *
      * @param authorizeRequests
      * @return
      */
     public ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry authorizeRequests(
-            ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry authorizeRequests)
-    {
+            ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry authorizeRequests) {
         authorizeRequests
                 // status
                 .antMatchers(HttpMethod.GET, "/api/v1/status").permitAll()
@@ -70,7 +69,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                             "/webjars/**").permitAll();
         }
 
-
         return authorizeRequests;
     }
 
@@ -80,13 +78,12 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .formLogin().disable()
                 .cors().configurationSource(corsConfigurationSource())
-            .and()
+                .and()
                 .addFilterAfter(corsOptionFilter, LogoutFilter.class)
                 .exceptionHandling()
-            .and()
+                .and()
                 .sessionManagement()
-                    .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         authorizeRequests(
                 http.authorizeRequests()

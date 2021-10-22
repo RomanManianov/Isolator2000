@@ -33,4 +33,6 @@ public interface ExampleResource {
     @ResponseStatus (HttpStatus.OK)
     @ApiOperation("Удаляем сущность")
     void deleteEntity(@PathVariable("id") Long id);
+
+
 }

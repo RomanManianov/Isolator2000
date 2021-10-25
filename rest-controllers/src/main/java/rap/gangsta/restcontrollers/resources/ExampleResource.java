@@ -14,7 +14,7 @@ public interface ExampleResource {
     @GetMapping("/{id}")
     @ResponseStatus (HttpStatus.OK)
     @ApiOperation("Получение сущности")
-    Entity getSomeEntity(@PathVariable("id") Long id,
+    Entity getEntity(@PathVariable("id") Long id,
                          @RequestBody Class clazz,
                          @CookieValue("Refresh_Token") String token,
                          @RequestParam("count") byte consumersCount);

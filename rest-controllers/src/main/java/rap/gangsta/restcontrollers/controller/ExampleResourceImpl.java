@@ -9,7 +9,7 @@ import javax.swing.text.html.parser.Entity;
 public class ExampleResourceImpl implements ExampleResource {
 
     @Override
-    public Entity getSomeEntity(Long id, Class clazz, String token, byte consumersCount) {
+    public Entity getEntity(Long id, Class clazz, String token, byte consumersCount) {
         return null;
     }
 
